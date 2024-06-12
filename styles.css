@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(120deg, #f4f4f4, #e2e2e2);
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    transition: background 0.5s ease;
+}
+
+body:hover {
+    background: linear-gradient(120deg, #e2e2e2, #f4f4f4);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1:after {
+    content: '';
+    width: 100px;
+    height: 4px;
+    background: #007bff;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.selector {
+    margin: 20px 0;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+    outline: none;
+    transform: scale(1.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-out;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+th {
+    background: linear-gradient(120deg, #007bff, #0056b3);
+    color: #fff;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    select, th, td {
+        font-size: 0.9em;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
